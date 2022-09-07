@@ -144,8 +144,8 @@ export const LoginForm = (props)=>{
 				}
 				else{
 					const LoginData = {
-							username: user,
-							password: pass
+							username: "example@email.com",
+							password: "example123"
 						}
 						props.LoginData(LoginData);
 						setUser("");
