@@ -1,0 +1,79 @@
+.formGroup{
+	/*background:  linear-gradient(0deg, rgba(10, 10, 60, .6), rgba(10, 10, 10, .6), rgba(10, 10, 10, .6), rgba(10, 10, 10, .6));*/
+	background: linear-gradient(155deg, rgb(80, 80, 80) 0%, rgb(80, 80, 80)50%, rgba(34, 10, 140, .4) 50%, rgba(34, 10, 180, .4)100% );
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #333;
+	align-content: center;
+	height: 60vh;
+	padding:  1rem;
+	color: white;
+}
+
+.formControl{
+	background: transparent;
+	margin: 10px 0px;
+	padding: 7px 10px;
+	border-radius: 4px;
+	color: white;
+	width: 100%;
+	border: none;
+	outline:  none;
+	transition: all .3s;
+	border-bottom: 1px solid gray;
+}
+.formControl:focus{
+	border-bottom: 1px solid black;
+}
+.btn{
+	background: transparent;
+	padding: 8px 10px;
+	margin:  1rem 0px;
+	cursor: pointer;
+	border-radius: 4px;
+	outline:  none;
+	border: none;
+	color:  white;
+	box-shadow: 0px 0px 10px rgba(40, 40, 40, 1);
+	background-color: rgba( 40, 160, 150, .4);
+	transition: all .2s;
+}
+.btn:hover, 
+.btn:focus{
+	background-color: rgba( 40, 160, 160, .8);
+	color: black;
+	box-shadow: 0px 0px 5px rgb(20, 20, 20);
+}
+.Form{
+	width: 25%;
+}
+
+.signup{
+	position: absolute;
+	background: linear-gradient(155deg, rgb(80, 80, 100) 0%, rgb(80, 80, 100)50%, rgb(34, 10, 140) 50%, rgb(34, 10, 180)100% );
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.signform{
+	width: 30%;
+}
+
+@media(max-width: 913px){
+	.Form{
+		width: 80%;
+	}
+	.formGroup{
+		height: 70vh;
+	}
+	.signform{
+		width: 90%;
+	}
+}
+
+

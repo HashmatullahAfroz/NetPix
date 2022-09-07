@@ -1,0 +1,18 @@
+body{
+	margin: 0px;
+}
+.coverLogin{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(155deg, rgb(200, 200, 200) 0%, rgb(200, 200, 200)50%, rgba(34, 10, 140, .6) 50%, rgba(34, 10, 180, .6)100% );
+	height: 100vh;
+	width: 100%;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:  transparent;
+}
