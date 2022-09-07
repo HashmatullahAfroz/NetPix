@@ -52,8 +52,8 @@ export const SignUpForm = (props)=>{
 					else{
 						let sign_obj = {
 							name: name,
-							username: "hashmat",
-							password: "123",
+							username: signUser,
+							password: signPass,
 							authorization: 0,
 						}
 						let json_file = JSON.stringify(sign_obj);
