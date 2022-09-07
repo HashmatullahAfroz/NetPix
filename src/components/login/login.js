@@ -12,6 +12,7 @@ export const Login = (props)=>{
 
 	// Fetch for express and Laravel here for login page 
 		const LoginFetchData = async ()=>{
+			try{
 			const login_data = JSON.stringify(loginData);
 			const response = await fetch("http://localhost:8000/login", { method: "POST",body: login_data , headers: { "content-type": "application/json"}} ); 
 			const data = await response.json();
@@ -39,7 +40,18 @@ export const Login = (props)=>{
 			}else{
 				alert("Icorrect Email or Password");
 			}
-		}
+		}catch(e){
+			console.log(e);
+		// for logging in
+		localStorage.setItem("react_logged", 1);
+		// for Authorization
+		localStorage.setItem("guest_authorize", 0);
+		// for the purpose of localstorage to take data while refresh (update)
+		window.open("http://localhost:3000/", "_parent");
+		// making false the login page for showing data
+		props.setLoginPage(false);
+
+	}
 		LoginFetchData();
 	}
 
