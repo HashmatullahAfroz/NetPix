@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import loginForm from "../css/loginForm.module.css";
 
-// tools imports 
+// tools imports
 import { InputText } from "../../tools/InputText.js";
 import { Button } from "../../tools/Button.js";
 
@@ -47,7 +47,7 @@ export const SignUpForm = (props)=>{
 			{
 				if( signUser.includes("@") && signUser.includes(".")){
 					if( signPass.length <= 8 ){
-						console.log("password should be more then 8 Characters");
+						alert("password should be more then 8 Characters");
 					}
 					else{
 						let sign_obj = {
@@ -58,16 +58,21 @@ export const SignUpForm = (props)=>{
 						}
 						let json_file = JSON.stringify(sign_obj);
 						const SignUpToDataBase = async ()=>{
-							const response = await fetch("http://localhost:8000/signup", {method: "POST", body: json_file, headers: {"Content-Type": "application/json"} });
-							const is_signup = await response.json();
-							if(is_signup){
-								alert("User Created successfully")
-							}else{
-								alert("failed to Create user")
+						try{
+								const response = await fetch("http://localhost:8000/signup", {method: "POST", body: json_file, headers: {"Content-Type": "application/json"} });
+								const is_signup = await response.json();
+								if(is_signup){
+									alert("User Created successfully")
+								}else{
+									alert("failed to Create user")
+								}
 							}
-						} 
+							catch(e){
+								console.log(e);
+							}
+						}
 						SignUpToDataBase();
-						
+
 						setName("");
 						setSignUser("");
 						setSignPass("");
@@ -126,7 +131,7 @@ export const LoginForm = (props)=>{
 
 	const PasswordHandler = (e)=>{
 		setPass(e.target.value);
-		if(pass.length > 8){
+		if(pass.length >= 7){
 			document.getElementById("password").style.border = "none";
 			document.getElementById("password").style.borderBottom = "1px solid gray";
 		}else{
@@ -139,7 +144,7 @@ export const LoginForm = (props)=>{
 			alert(" fill all the blanks ");
 		}else{
 			if( user.includes("@") && user.includes(".")){
-				if( pass.length <= 8 ){
+				if( pass.length <= 7 ){
 					alert("password should be more then 8 Characters");
 				}
 				else{
@@ -163,7 +168,7 @@ export const LoginForm = (props)=>{
 		const SubmitSignUpHandler = ()=>{
 			setShowSignUp(true);
 		}
-	
+
 
 	return(
 		<>
