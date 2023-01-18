@@ -71,7 +71,7 @@ const LogoutHandler = ()=>{
               showUserInfoPage
                 &&
             <>
-             <Navbar firstBtnName={showAuthorizeLoginPage && "Welcome Hashmatullah" || "Welcome User" } onClick={ userInfo } secondBtnName="Logout" onClickLogout={ LogoutHandler } backgroundColor="#242424" />
+             <Navbar firstBtnName={showAuthorizeLoginPage && ("Welcome Hashmatullah" || "Welcome User") } onClick={ userInfo } secondBtnName="Logout" onClickLogout={ LogoutHandler } backgroundColor="#242424" />
               <div className={`${app.usercontainer}`}>
                  <div className={`${app.row}`}>
                    <div className={`${app.coluserinfo}`} >
@@ -102,7 +102,7 @@ const LogoutHandler = ()=>{
                     showDataPage
                       &&
                     <>
-                      <Navbar firstBtnName={showAuthorizeLoginPage &&  "Add Movie" || "Welcome User" } onClick={ showAuthorizeLoginPage &&  backHandler || userInfo } secondBtnName="Logout" onClickLogout={ LogoutHandler } backgroundColor="#242424"  />
+                      <Navbar firstBtnName={showAuthorizeLoginPage &&  ("Add Movie" || "Welcome User" )} onClick={ showAuthorizeLoginPage && ( backHandler || userInfo )} secondBtnName="Logout" onClickLogout={ LogoutHandler } backgroundColor="#242424"  />
                       <CardData  />
                     </>
                   }
