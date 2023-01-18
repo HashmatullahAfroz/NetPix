@@ -87,7 +87,7 @@ const LogoutHandler = ()=>{
             <>
             <div className={`${app.container}`}>
               <div className={`${app.row}`}>
-                <div className={`${app.col5}`} >
+                <div className={`${app.col5}`}>
                   {
                     !showDataPage
                       &&
