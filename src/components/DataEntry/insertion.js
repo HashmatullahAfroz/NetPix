@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import insertion from "./css/insertion.module.css";
 
-// tools imports 
+// tools imports
 import { InputText } from "../tools/InputText.js";
 import { Button } from "../tools/Button.js";
 
@@ -43,7 +43,7 @@ export const DataEntry = (props)=>{
 			};
 
 			const jsonData = JSON.stringify(obj);
-			
+
 			const InsertMovieImg = async ()=>{
 				const response = await fetch("http://localhost:8000/movie", {method: "POST", body: jsonData, headers: { "content-type": "application/json" }});
 				const is_insert = await response.json();
@@ -61,12 +61,12 @@ export const DataEntry = (props)=>{
 			InsertMovieImg();
 
 
-			
+
 
 			setAddMovie("");
 			setReleaseDate("");
 			setType("");
-			
+
 		}
 	}
 
@@ -97,4 +97,3 @@ export const DataEntry = (props)=>{
 			</>
 		)
 }
-	

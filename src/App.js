@@ -55,7 +55,7 @@ const userInfo = ()=>{
 // logout
 const LogoutHandler = ()=>{
     localStorage.setItem("react_logged", 0);
-    window.open("http://localhost:3000/", "_parent");
+    window.open("https://hashmatullahafroz.github.io/netpix/", "_parent");
     setLoginPage(true);
  }
 

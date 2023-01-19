@@ -24,13 +24,13 @@ export const Login = (props)=>{
 						// for Authorization
 						localStorage.setItem("guest_authorize", 0);
 						// for the purpose of localstorage to take data while refresh (update)
-						window.open("http://localhost:3000/", "_parent");
+						window.open("https://hashmatullahafroz.github.io/netpix/", "_parent");
 						// making false the login page for showing data
 						props.setLoginPage(false);
 					}else{
 						localStorage.setItem("guest_authorize", 2);
 						// for the purpose of localstorage to take data while refresh (update)
-						window.open("http://localhost:3000/", "_parent");
+						window.open("https://hashmatullahafroz.github.io/netpix/", "_parent");
 						// making false the login page for showing data
 						props.setLoginPage(false);
 						// making false the login page for showing the authorized data for user (guest)
@@ -48,7 +48,7 @@ export const Login = (props)=>{
 					// for Authorization
 					localStorage.setItem("guest_authorize", 0);
 					// for the purpose of localstorage to take data while refresh (update)
-					window.open("http://localhost:3000/", "_parent");
+					window.open("https://hashmatullahafroz.github.io/netpix/", "_parent");
 					// making false the login page for showing data
 					props.setLoginPage(false);
 				}else{
